@@ -1,0 +1,149 @@
+@import "../../mixins.scss";
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 7;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(0px);
+  transition: all 0.3s ease-in-out;
+  @include md {
+    height: 80px;
+    padding: 0;
+  }
+
+  &.top {
+    background-color: rgb(7, 1, 20, 0.2);
+    backdrop-filter: blur(5px);
+  }
+
+  &.show {
+    background-color: var(--black);
+  }
+
+  &.hide {
+    transform: translateY(-60px);
+    pointer-events: none;
+    @include md {
+      transform: translateY(-80px);
+    }
+  }
+
+  .contentWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logoContainer {
+      width: 160px;
+      height: 100%;
+      margin-left: -20px;
+
+      @include md {
+        width: 200px;
+        margin-left: 0px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        cursor: pointer;
+      }
+    }
+
+    .menuItems {
+      display: none;
+      color: white;
+
+      @include md {
+        display: flex;
+        align-items: center;
+      }
+
+      .menuItem {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 18px;
+        transition: all 0.4s;
+
+        &:hover {
+          color: var(--orange);
+        }
+
+        @include md {
+          margin-left: 30px;
+        }
+
+        .searchIcon {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .mobileMenuItems {
+      position: relative;
+      display: flex;
+      align-items: center;
+      color: #ddd;
+      transition: transform 0.3s ease-in;
+
+      @include md {
+        display: none;
+      }
+
+      .icon {
+        transition: all 0.3s;
+        margin-left: 1rem;
+        cursor: pointer;
+        &:hover {
+          color: var(--orange);
+        }
+      }
+
+      .menuIcon,
+      .closeIcon {
+        font-size: 1.2rem;
+        color: #eee;
+      }
+    }
+  }
+
+  &.mobileViewActive {
+    background-color: var(--black);
+
+    .menuItems {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      opacity: 0;
+      padding: 20px 0;
+      background-color: var(--black);
+      animation: 0.3s ease-in forwards 1 showMobileMenu;
+
+      .menuItem {
+        padding: 16px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@keyframes showMobileMenu {
+  to {
+    top: 60px;
+    opacity: 1;
+  }
+}
