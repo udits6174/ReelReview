@@ -1,8 +1,12 @@
 import React from "react";
 
-const GenresTab = () => {
+const GenresTab = ({ genre, onTabClick, active = "" }) => {
   return (
-    <div>
+    <div
+      className={`genresTab ${active === true ? "activeTab" : ""}`}
+      onClick={onTabClick}
+    >
+      {genre}
     </div>
   );
 };

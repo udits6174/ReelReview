@@ -1,3 +1,5 @@
+import React, { useEffect } from "react";
+
 import "./BarLoader.styles.scss";
 
 const BarLoader = () => {
