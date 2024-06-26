@@ -1,0 +1,59 @@
+@import "../../mixins.scss";
+
+.detailsContainer {
+  padding-bottom: 5rem;
+
+  @include lg {
+    padding-inline: 3rem;
+  }
+
+  .section {
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+
+    .contentWrapper {
+      padding-inline: 2rem;
+
+      @include md {
+        padding-inline: 4rem;
+      }
+
+      .sectionTitle {
+        font-size: 1.35rem;
+        font-weight: 600;
+
+        @include lg {
+          font-size: 1.5rem;
+        }
+      }
+
+      .carouselContainer {
+        margin-top: 0;
+        .leftArrowContainer {
+          left: -15px;
+        }
+
+        .rightArrowContainer {
+          right: -15px;
+        }
+
+        .contentWrapper {
+          width: 100%;
+          padding-inline: 0;
+        }
+      }
+    }
+  }
+
+  .notAvailable {
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: #aaa;
+
+    @include md {
+      font-size: 1.25rem;
+    }
+  }
+}

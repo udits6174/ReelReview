@@ -1,0 +1,20 @@
+@import "../../../mixins.scss";
+
+.videosContainer {
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .videoItems {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      overflow-y: hidden;
+
+      @include lg {
+        gap: 2rem;
+      }
+    }
+  }
+}
