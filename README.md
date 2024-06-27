@@ -1,4 +1,3 @@
-```markdown
 # Reel Review
 
 Reel Review is a web application that allows users to explore and review movies using data from The Movie Database (TMDb) API.
@@ -69,4 +68,3 @@ The backend server routes all requests through it to resolve CORS issues when in
 8. Start the server:
    ```
    npm run start
-   ```
