@@ -1,5 +1,3 @@
-Here's a README.md file for your GitHub project based on the information you provided:
-
 ```markdown
 # Reel Review
 
