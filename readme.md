@@ -5,8 +5,8 @@ Reel Review is a web application that allows users to explore and review movies 
 
 ## Live Demo
 
-- Frontend: [https://reel-review-frontend-mn5bj6pj2-udits6174s-projects.vercel.app/](https://reel-review-frontend-mn5bj6pj2-udits6174s-projects.vercel.app/)
-- Backend: [reelreview-txf0.onrender.com](https://reelreview-txf0.onrender.com)
+- [Reel Review Frontend](https://reel-review-frontend-mn5bj6pj2-udits6174s-projects.vercel.app/ "View Reel Review Frontend")
+- [Reel Review Backend](reelreview-txf0.onrender.com "View Reel Review Frontend")
 
 ## Tech Stack
 
